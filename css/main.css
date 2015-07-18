@@ -1,0 +1,395 @@
+@charset "utf-8";
+/* =============================================== */
+/*  Foundation */
+/* =============================================== */
+body {
+  background: #f5f5f5 none;
+  color: #333;
+  font-size:16px;
+	font-family: 'PT Sans', sans-serif;
+}
+
+
+/* =============================================== */
+/* Component */
+/* 再利用できるパターンとして、小さな単位のモジュールを定義 */
+/* =============================================== */
+
+/* for headroom.js */
+/*.headroom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all .2s ease-in-out;
+}*/
+
+
+
+.header {
+	background:#fff none;
+}
+.header__logo {
+	float:left;
+	margin:0.9rem 0 0.5rem 0;
+}
+.header__sub-menu {
+	float:right;
+}
+
+.nav__items {
+}
+
+
+
+.login-btn{
+	background: #ff7f00; /* Old browsers */
+	background: linear-gradient(to bottom,  #ff7f00 0%,#f36600 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7f00', endColorstr='#f36600',GradientType=0 ); /* IE6-9 */
+	border:1px solid #ed6b00;
+	border-radius:0.2rem;
+	text-decoration:none;
+	color:#fff;
+	font-size:0.9rem; 
+	padding:0.3em 3em;
+	margin:0.5rem 0 0 0;
+	display:inline-block;
+}
+.login-btn:hover{
+	background: #fb8129; /* Old browsers */
+	background: linear-gradient(to bottom,  #fb8129 0%,#f98329 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb8129', endColorstr='#f98329',GradientType=0 ); /* IE6-9 */
+	border:1px solid #f98329;
+}
+
+.common__btn{
+	background: #fff; /* Old browsers */
+	background: linear-gradient(to bottom,  #fff 0%,#e6e6e6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6',GradientType=0 ); /* IE6-9 */
+	border:1px solid #f2f2f2;
+	border-radius:0.2rem;
+	text-decoration:none;
+	color:#333;
+	font-size:1.2rem;
+	
+	display:block;
+	padding:1.4rem;
+	margin-bottom:0.72rem;
+	clear:both;
+}
+.common__btn:hover{
+	background: #eee; /* Old browsers */
+	background: linear-gradient(to bottom,  #eee 0%,#dbdbdb 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
+	border:1px solid #fff;
+}
+.common__btn:last-child{
+	margin-bottom:0;
+}
+.common__btn i{
+	font-size:1.6rem;
+	padding-right:0.6rem;
+}
+.common__heading2{
+	color:#151a59;
+	font-size:1.2rem;
+	margin:1rem 0 0.3rem 0;
+}
+
+.footer {
+	background:#151a59 none;
+	color:#fff;
+	padding:0.5rem 0 0.7rem 0;
+	text-align:right;
+	margin:3rem 0 0 0;
+}
+
+/* =============================================== */
+/* Project */
+/* プロジェクト固有のパターンであり、いくつかのComponentと、それに該当しない要素によって構成されるものを定義 */
+/* =============================================== */
+
+.top-search{
+	background:#d9d9d9 none; /* Old browsers */
+	background-image: linear-gradient(#151a59, #151a59);
+	background-repeat: no-repeat;
+	background-size: 100% 59%;
+	background-position: top 0;
+	margin-bottom:3rem;
+}
+.search-map{
+	width:660px;
+  float:left;
+	height:470px;
+	background:#ededed;
+	border:1px solid #fff;
+	position:relative;
+	padding:0;
+	
+	margin:1.2rem 0;
+}
+.search-map__mapdata{
+	position:absolute;
+	top:0;
+	left:0;
+	margin:0;
+}
+.search-map__area{
+	position:absolute;
+	border:1px solid #fff;
+	margin:0;
+	padding:0;
+	width:11.8rem;
+	background:#fff none;
+}
+.search-map__area dt{
+	background:#333 none;
+	text-align:center;
+	color: #fff;
+	padding:0.1rem 0;
+	font-size:1.1rem;
+	
+}
+.search-map__area dd{
+	padding:0.4rem 0.4rem 0.6rem 1rem;
+	margin:0;
+}
+.search-map__area dd a{
+	margin:0;
+	display:inline-block;
+	font-size:0.9rem;
+	font-weight:bold;
+	color:#09c;
+	text-decoration:none;
+	margin-right:0.4rem;
+}
+.search-map__area dd a:hover{
+	color:#09c;
+	text-decoration:underline;
+}
+.search-map__area dd a:after{
+	content:" /";
+	font-weight:normal;
+	color:#333;
+}
+
+.search-map__area--fukuoka{
+	top: 4rem;
+	left: 4rem;
+}
+.search-map__area--chikugo{
+	bottom: 4rem;
+	left: 9rem;
+}
+.search-map__area--chikuhou{
+	top: 13rem;
+	right: 6rem;
+}
+.search-map__area--kitakyushu{
+	top: 2rem;
+	right: 2rem;
+}
+
+.search-block{
+	padding:1.2rem 0;
+	width:300px;
+	float:right;
+}
+
+.search-way__btn i{
+	color:#09c;
+}
+.search-support__btn i{
+	color:#fd8631;
+}
+
+.event-banner,
+.category-list,
+.top-news{
+	padding:0 0 3rem 0;
+}
+.top-news{
+	padding:2rem 0 3rem 0;
+}
+.event-banner .slide a:hover img{
+	opacity:0.7;
+}
+.category-list__items{
+	background:#fff none;
+	padding:1.2rem 0 0 0.2rem;
+	max-height: 13.5rem;  /* show height */
+	margin:0 -1rem 0 0;
+	width: 100%;
+	box-sizing: border-box;
+	overflow:hidden;
+}
+
+.category-list__items li{
+	list-style:none;
+	display:inline-block;
+	position:relative;
+	margin-left:1rem;
+	margin-bottom:1rem;
+}
+.category-list__items li a:hover{
+	opacity:0.8;
+}
+.category-list__items li span{
+	position:absolute;
+	top:1rem;
+	left:1rem;
+	font-weight:bold;
+	font-size:1.2rem;
+	color:#fff;
+	text-shadow:1px 1px 0px #666;
+}
+
+.category-list__more{
+	margin:0;
+}
+.category-list__more a{
+	text-decoration:none;
+	color:#09c;
+	font-size:0.9rem;
+	font-weight:bold;
+	
+	padding:0.3rem 1rem 0.3rem 1.3rem;
+	display:block;
+	float:right;
+	background:#fff none;
+}
+.category-list__more a:hover{
+	color:#30bbe9;
+}
+
+.top-news__label{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.column-title{
+	float:left;
+	background:#fff none;
+	padding:0.6rem 1.2rem;
+	background:#09c none;
+}
+.column-title h2{
+	margin:0;
+	padding:0;
+	font-size:1.0rem;
+	
+}
+.column-title a{
+	text-decoration:none;
+	color:#fff;
+	
+}
+.column-title.active {
+	background:#fff none;
+}
+.column-title.active a{
+  color:#151a59;
+
+}
+
+.column-items{
+	clear:both;
+	list-style:none;
+	margin:0;
+	padding:0;
+	background:#fff none;
+	padding:1rem 0 0 1rem;
+}
+
+
+.column-items li{
+	width:50%;
+	float:left;
+	margin:0 0 1rem 0;
+}
+.column-items__image{
+	float:left;
+	margin:0 0.5rem 0 0;
+	padding:0;
+}
+.column-items__image a:hover{
+	opacity:0.7;
+}
+.column-items__title{
+	margin:0 0 0.3rem 0;
+	font-size:1rem;
+	line-height:1rem;
+}
+.column-items__title a{
+	color:#09c;
+}
+.column-items__title a:hover{
+	text-decoration:none;
+}
+.column-items__text{
+	margin:0;
+	padding:0;
+	font-size:0.9rem;
+}
+
+
+/* =============================================== */
+/* Utility */
+/* ComponentとProjectレイヤーのObjectのモディファイアで解決することが難しい・適切では無い、わずかなスタイルの調整のための便利クラスなどを定義 */
+/* =============================================== */
+
+.clearfix:after {  
+  content: ".";   
+  display: block;
+  height: 0;
+  clear: both;   
+  visibility: hidden;  
+}
+
+.common__inner-width {
+  max-width:980px;
+  margin:0 auto;
+}
+
+
+/* bxslider override */
+.event-banner .bx-wrapper {
+	margin: 0;
+}
+.event-banner .bx-wrapper .bx-viewport{
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-top:#ddddeb 1rem solid;
+	border-bottom:#ddddeb 1rem solid;
+	border-left:#ddddeb 3rem solid;
+	border-right:#ddddeb 3rem solid;
+	background:#ddddeb none;
+	padding:0;
+}
+/* コントローラのカスタマイズ面倒くさい…あとでやる */
+.event-banner .bx-wrapper .bx-prev {
+	left: 3px;
+}
+.event-banner .bx-wrapper .bx-next {
+	right: -84px;
+}
+.event-banner .bx-wrapper .bx-controls-direction a {
+
+}
+@media ( max-width : 960px ) {
+	.top-search{
+		background-size: 100% 80%;
+	}
+
+	.search-map{
+		width:90%;
+		float:none;
+		padding:1.2rem;
+	}
+	.search-block{
+		width:94%;
+		float:none;
+		padding:1.2rem;
+	}
+}
